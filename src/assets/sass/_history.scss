@@ -1,0 +1,33 @@
+.history{
+    margin-bottom: 80px;
+
+    @include mediaMobile{
+        //width: 100%;
+    }
+
+    .row{
+        align-items: center;
+        @include mediaTablet{
+            flex-direction: column-reverse;
+        }
+    }  
+    .history_img{
+        img{
+            border-radius: 10px;
+            width: 100%;
+            box-shadow: $box-shadow;
+        }
+    }
+
+    .history_title{
+        .title-2 {
+            margin-bottom: 30px;
+        }
+        .history_info-p:last-child{
+            margin-top: 20px;
+        }
+        @include mediaTablet{
+            margin-bottom: 30px;
+        }
+    }
+}

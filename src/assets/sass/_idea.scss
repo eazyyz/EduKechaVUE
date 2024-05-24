@@ -1,0 +1,46 @@
+.idea {
+    margin-top: 92px;
+    margin-bottom: 80px;
+    text-align: center;
+
+    @include mediaMobile {}
+
+    .idea__title {
+        margin-bottom: 54px;
+
+        @include mediaTablet {
+            margin-bottom: 25px;
+            align-items: center;
+        }
+    }
+
+    .idea__card {
+        margin-right: 106px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        img {
+            margin-bottom: 24px;
+        }
+
+        .idea__card__text {
+            a {
+                font-weight: 500;
+                font-size: 20px;
+            }
+
+            p {
+                margin: 24px 21px;
+            }
+        }
+
+        @include mediaTablet {
+            margin-bottom: 50px;
+            align-items: center;
+            margin-right: 0;
+        }
+    }
+
+
+}

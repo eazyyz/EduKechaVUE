@@ -1,0 +1,119 @@
+@mixin promo-styles {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+
+    .promo_title {
+        display: flex;
+        justify-content: space-between;
+
+        @include mediaTablet {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .promo_title__text {
+            font-size: inherit;
+            text-align: left;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 16px;
+
+            @include mediaTablet {
+                font-size: 38px;
+                margin-bottom: 0;
+                text-align: inherit;
+                padding-bottom: 10px;
+            }
+        }
+
+        p {
+            @include mediaTablet {
+                font-size: 20px;
+                text-align: inherit;
+                padding-bottom: 15px;
+            }
+
+            color: $gray;
+        }
+
+        .promo___buttons {
+            // display: flex; перекрывает 
+            gap: 20px;
+
+            @include mediaTablet {
+                align-items: center;
+                flex-direction: column;
+                gap: 7px;
+            }
+
+            button {
+                font-size: 16px;
+                height: 50px;
+                border-radius: 12px;
+                transition: transform 200ms, box-shadow 200ms;
+                z-index: -1;
+                &:focus {
+                    transform: scale(.95)
+                }
+
+                &:hover {
+                    box-shadow: 0 0 10px 0 $main-2;
+                }
+            }
+
+            .promo_title_btn-prymary {
+                @include mediaTablet {
+                    width: 300px;
+                }
+
+                width: 180px;
+                background-color: $main;
+                color: $light;
+                margin-bottom: 7px;
+                margin-right: 7px;
+            }
+
+            .promo_title_btn-secondary {
+                @include mediaTablet {
+                    width: 300px;
+                    margin-bottom: 20px;
+                }
+
+                width: 225px;
+                //background-color: $light;
+                border: 3px solid $main;
+                color: $main;
+                align-items: center;
+            }
+
+            span {
+                position: relative;
+                margin-right: 30px;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 20px;
+                    height: 20px;
+                    background: url('../public/Arrow.svg') center no-repeat;
+                }
+            }
+        }
+    }
+}
+
+.promo {
+    @include promo-styles;
+
+
+    @include mediaTablet {
+        min-height: unset;
+    }
+
+    @include mediaMobile {}
+
+}
